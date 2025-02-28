@@ -1,0 +1,97 @@
+[
+	{
+		"jobId": 1,
+		"title": "Software Engineer",
+		"company": "Tech Solutions Inc.",
+		"description": "We are looking for a talented Software Engineer to join our dynamic team. You will work on cutting-edge technologies and contribute to building high-performance applications.",
+		"location": "San Francisco, CA",
+		"salary": "120000",
+		"employmentType": "Full-time",
+		"experienceRequired": "2-5 years",
+		"skillsRequired": [
+			"JavaScript",
+			"Node.js",
+			"React",
+			"MongoDB"
+		],
+		"postedDate": "2024-11-01",
+		"companyLogo": "https://example.com/logos/tech-solutions.png",
+		"applyLink": "https://techsolutions.com/careers/software-engineer"
+	},
+	{
+		"jobId": 2,
+		"title": "Product Manager",
+		"company": "Innovative Tech Corp.",
+		"description": "We are looking for a passionate Product Manager to lead our product development. You will work with cross-functional teams to define product vision, strategy, and roadmaps.",
+		"location": "New York, NY",
+		"salary": "110000",
+		"employmentType": "Full-time",
+		"experienceRequired": "3-7 years",
+		"skillsRequired": [
+			"Product Management",
+			"Agile",
+			"Leadership",
+			"Market Research"
+		],
+		"postedDate": "2024-11-15",
+		"companyLogo": "https://example.com/logos/innovative-tech.png",
+		"applyLink": "https://innovativetech.com/careers/product-manager"
+	},
+	{
+		"jobId": 3,
+		"title": "Data Analyst",
+		"company": "Data Insights LLC",
+		"description": "Join our team as a Data Analyst where you will analyze large datasets and help in generating actionable insights for business improvement.",
+		"location": "Remote",
+		"salary": "90000",
+		"employmentType": "Full-time",
+		"experienceRequired": "1-3 years",
+		"skillsRequired": [
+			"SQL",
+			"Python",
+			"Data Visualization",
+			"Excel"
+		],
+		"postedDate": "2024-11-20",
+		"companyLogo": "https://example.com/logos/data-insights.png",
+		"applyLink": "https://datainsights.com/careers/data-analyst"
+	},
+	{
+		"jobId": 4,
+		"title": "Marketing Specialist",
+		"company": "Creative Agency",
+		"description": "We are seeking a Marketing Specialist to help us develop and execute digital marketing strategies. You will oversee campaigns, analyze results, and contribute to brand growth.",
+		"location": "Los Angeles, CA",
+		"salary": "75000",
+		"employmentType": "Part-time",
+		"experienceRequired": "1-2 years",
+		"skillsRequired": [
+			"SEO",
+			"Content Marketing",
+			"Google Analytics",
+			"Social Media"
+		],
+		"postedDate": "2024-11-10",
+		"companyLogo": "https://example.com/logos/creative-agency.png",
+		"applyLink": "https://creativeagency.com/careers/marketing-specialist"
+	},
+	{
+		"jobId": 5,
+		"title": "UX/UI Designer",
+		"company": "DesignHub",
+		"description": "We are looking for a creative and skilled UX/UI Designer to join our team. You will design user-friendly interfaces and create a seamless user experience for web and mobile applications.",
+		"location": "Remote",
+		"salary": "95000",
+		"employmentType": "Full-time",
+		"experienceRequired": "3-5 years",
+		"skillsRequired": [
+			"Adobe XD",
+			"Figma",
+			"Sketch",
+			"User Research"
+		],
+		"postedDate": "2024-11-18",
+		"companyLogo": "https://example.com/logos/designhub.png",
+		"applyLink": "https://designhub.com/careers/ux-ui-designer"
+	}
+]
