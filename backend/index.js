@@ -14,7 +14,7 @@ const applicationRouter = require('./routes/applicationRoutes');
 const PORT = process.env.PORT || 8000;
 const app = express();
 const corsOption = {
-	origin: 'hhttps://mernjobportal-frontend.onrender.com',
+	origin: 'https://mernjobportal-frontend.onrender.com',
 	credentials: true
 }
 
