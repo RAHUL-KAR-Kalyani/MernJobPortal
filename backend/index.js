@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 const corsOption = {
 	origin: 'https://mernjobportal-frontend.onrender.com',
+	 methods: ["GET", "POST", "PUT", "DELETE"],
 	credentials: true
 }
 
