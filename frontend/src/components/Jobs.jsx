@@ -47,7 +47,7 @@ const Jobs = () => {
 	}, [allJobs, searchedQuery])
 
 	return (
-		<div>
+		<div className=''>
 			<Navbar />
 
 			<div className='max-w-7xl mx-auto mt-5'>

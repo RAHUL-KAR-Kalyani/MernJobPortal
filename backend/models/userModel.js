@@ -8,21 +8,21 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        require: true,
+        required: true,
         unique: true
     },
     phoneNumber: {
         type: Number,
-        require: true
+        required: true
     },
     password: {
         type: String,
-        require: true
+        required: true
     },
     role: {
         type: String,
         enum: ['student', 'recruiter'],
-        require: true
+        required: true
     },
     profile: {
         bio: { type: String },

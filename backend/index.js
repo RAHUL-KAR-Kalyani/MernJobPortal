@@ -5,13 +5,13 @@ require('dotenv').config();
 const coockieParser = require('cookie-parser');
 const cors = require('cors');
 const connectDB = require('./utils/db');
+const isAuth = require('./middlewares/isAuth');
 const userRouter = require('./routes/userRoutes');
 const companyRouter = require('./routes/companyRoutes');
-const isAuth = require('./middlewares/isAuth');
 const jobRouter = require('./routes/jobRoutes');
 const applicationRouter = require('./routes/applicationRoutes');
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 const app = express();
 const corsOption = {
 	origin: 'http://localhost:5173',
@@ -38,9 +38,15 @@ app.get('/', (req, res) => {
 
 // app.use("api/v1/user",userRouter)
 app.use("/auth/user", userRouter)
-app.use("/auth/company", isAuth, companyRouter)
-app.use("/auth/job", isAuth, jobRouter)
-app.use("/auth/application", isAuth, applicationRouter)
+app.use("/auth/company", companyRouter)
+app.use("/auth/job", jobRouter)
+app.use("/auth/application", applicationRouter)
+
+// app.use("/auth/user", userRouter)
+// app.use("/auth/company", isAuth, companyRouter)
+// app.use("/auth/job", isAuth, jobRouter)
+// app.use("/auth/application", isAuth, applicationRouter)
+
 
 
 // api list 
@@ -53,7 +59,3 @@ app.listen(PORT, () => {
 	connectDB()
 	console.log(`Server is running at: http://localhost:${PORT}/`);
 });
-
-
-
-// arya sir 6290504332

@@ -44,14 +44,17 @@ const Login = () => {
 				},
 				withCredentials: true,
 			});
-			// console.log(res.data.success)
+			console.log(res.data.success);
+			console.log("API Response:", res.data);
 			if (res.data.success) {
 				dispatch(setUser(res.data.user));
+				console.log("Navigating...");
 				navigate("/");
 				toast.success(res.data.message);
 			}
 		} catch (error) {
 			console.log(error);
+			console.log('login error-> ',error);
 			toast.error(error.response.data.message);
 		} finally {
 			dispatch(setLoading(false));

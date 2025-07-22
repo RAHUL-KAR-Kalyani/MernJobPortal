@@ -17,11 +17,13 @@ const CreateCompany = () => {
 
 	const registerNewCompany = async () => {
 		try {
-			const res = await axios.post(`${COMPANY_API_ENDPOINT}/registercompany`, { companyName }, {
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				withCredentials: true
+			const res = await axios.post(`${COMPANY_API_ENDPOINT}/registercompany`,
+				{ companyName },
+				{
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					withCredentials: true
 			})
 			if (res?.data?.success) {
 				dispatch(setSingleCompany(res.data.company));

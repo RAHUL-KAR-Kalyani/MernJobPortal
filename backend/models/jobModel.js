@@ -8,14 +8,14 @@ const jobSchema = new Schema({
 	},
 	description: {
 		type: String,
-		require: true
+		required: true
 	},
 	requirements: [{
 		type: String
 	}],
 	salary: {
 		type: Number,
-		require: true
+		required: true
 	},
 	experienceLevel: {
 		type: Number,

@@ -83,6 +83,8 @@ function App() {
 	return (
 		<div>
 			<RouterProvider router={appRouter} />
+			{/* <h1 className='bg-red-500'>hi</h1> */}
+
 		</div>
 	)
 }
