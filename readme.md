@@ -4,6 +4,11 @@ A full-stack Job Portal application built with the MERN stack (MongoDB, Express.
 
 ---
 
+⚠️ Note: Backend is hosted on a free Render tier.  
+It may take 30–60 seconds to wake up after inactivity.
+
+---
+
 ## Table of Contents
 
 - [Features](#features)
