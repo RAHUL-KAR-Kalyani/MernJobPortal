@@ -137,11 +137,17 @@ const loginController = async (req, res) => {
 			profile: user.profile
 		}
 
-		return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: 'strict' }).json({
+		// return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: 'strict' }).json({
+		// 	message: `Welcome back ${user.fullname}! Let's get started. 😊`,
+		// 	user,
+		// 	success: true
+		// });
+		return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true, secure: true, sameSite: 'none' }).json({
 			message: `Welcome back ${user.fullname}! Let's get started. 😊`,
 			user,
 			success: true
 		});
+		
 
 	} catch (error) {
 		console.log(error);
