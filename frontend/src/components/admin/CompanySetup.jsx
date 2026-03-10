@@ -47,7 +47,7 @@ const CompanySetup = () => {
 
 		try {
 			setLoading(true);
-			const res = await axios.put(`${COMPANY_API_ENDPOINT}//updatecompany/${params.id}`, formData, {
+			const res = await axios.put(`${COMPANY_API_ENDPOINT}/updatecompany/${params.id}`, formData, {
 				headers: {
 					'Content-Type': 'multipart/form-data'
 				},
@@ -55,23 +55,23 @@ const CompanySetup = () => {
 			})
 
 			if (res.data.success) {
-				toast.success(res.data.message);
+				toast.success(res?.data?.message);
 				navigate(`/admin/companies`);
 			}
 		} catch (error) {
 			console.log(error);
-			toast.error(error.response.data.message);
+			toast.error(error.response?.data?.message);
 		} finally {
 			setLoading(false)
 		}
 	}
 	useEffect(() => {
         setInput({
-            name: singleCompany.name || "",
-            description: singleCompany.description || "",
-            website: singleCompany.website || "",
-            location: singleCompany.location || "",
-            file: singleCompany.file || null
+            name: singleCompany?.name || "",
+            description: singleCompany?.description || "",
+            website: singleCompany?.website || "",
+            location: singleCompany?.location || "",
+            file: singleCompany?.file || null
         })
     },[singleCompany]);
 
@@ -90,19 +90,19 @@ const CompanySetup = () => {
 					<div className='grid grid-cols-2 gap-4'>
 						<div>
 							<Label>Company Name</Label>
-							<Input type="text" name="name" value={input.name} onChange={changeEventHandler} />
+							<Input type="text" name="name" value={input?.name} onChange={changeEventHandler} />
 						</div>
 						<div>
 							<Label>Description</Label>
-							<Input type="text" name="description" value={input.description} onChange={changeEventHandler} />
+							<Input type="text" name="description" value={input?.description} onChange={changeEventHandler} />
 						</div>
 						<div>
 							<Label>Website</Label>
-							<Input type="text" name="website" value={input.website} onChange={changeEventHandler} />
+							<Input type="text" name="website" value={input?.website} onChange={changeEventHandler} />
 						</div>
 						<div>
 							<Label>Location</Label>
-							<Input type="text" name="location" value={input.location} onChange={changeEventHandler} />
+							<Input type="text" name="location" value={input?.location} onChange={changeEventHandler} />
 						</div>
 						<div>
 							<Label>Logo</Label>
