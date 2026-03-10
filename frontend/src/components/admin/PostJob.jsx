@@ -39,8 +39,8 @@ const PostJob = () => {
 
 		// const selectedCompany = companies.find((company) => company.name === value);
 
-		const selectedCompany = companies.find((company) => company.name.toLowerCase() === value);
-		setInput({ ...input, companyId: selectedCompany._id });
+		const selectedCompany = companies?.find((company) => company?.name?.toLowerCase() === value);
+		setInput({ ...input, companyId: selectedCompany?._id });
 
 		// if (selectedCompany) {
 		// 	setInput((prev) => ({ ...prev, companyId: selectedCompany._id }));
@@ -59,12 +59,12 @@ const PostJob = () => {
 				},
 				withCredentials: true
 			});
-			if (res.data.success) {
-				toast.success(res.data.message);
+			if (res?.data?.success) {
+				toast.success(res?.data?.message);
 				navigate("/admin/jobs");
 			}
 		} catch (error) {
-			toast.error(error.response.data.message);
+			toast.error(error.response?.data?.message);
 		} finally {
 			setLoading(false);
 		}
@@ -80,36 +80,36 @@ const PostJob = () => {
 					<div className='grid grid-cols-2 gap-2'>
 						<div>
 							<Label>Title</Label>
-							<Input type="text" name="title" placeholder="Enter Job Title" value={input.title} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="title" placeholder="Enter Job Title" value={input?.title} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							<Label>Description</Label>
-							<Input type="text" name="description" placeholder="Enter Job Description" value={input.description} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="description" placeholder="Enter Job Description" value={input?.description} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							<Label>Requirements</Label>
-							<Input type="text" name="requirements" placeholder="Enter Job Requirements" value={input.requirements} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="requirements" placeholder="Enter Job Requirements" value={input?.requirements} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							<Label>Salary</Label>
-							<Input type="text" name="salary" placeholder="Enter Job Salary i.e. 1200000" value={input.salary} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="salary" placeholder="Enter Job Salary i.e. 1200000" value={input?.salary} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							<Label>Location</Label>
-							<Input type="text" name="location" placeholder="Enter Job Location" value={input.location} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="location" placeholder="Enter Job Location" value={input?.location} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							<Label>Job Type</Label>
-							<Input type="text" name="jobType" placeholder="Full Time/Part Time" value={input.jobType} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="jobType" placeholder="Full Time/Part Time" value={input?.jobType} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							<Label>Experience Level</Label>
-							<Input type="text" name="experience" placeholder="Enter Job Description" value={input.experience} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="text" name="experience" placeholder="Enter Job Description" value={input?.experience} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						<div>
 							{/* <Label>Available Positions</Label> */}
 							<Label>No of Position</Label>
-							<Input type="number" name="position" placeholder="Enter Job Vacancy" value={input.position} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
+							<Input type="number" name="position" placeholder="Enter Job Vacancy" value={input?.position} onChange={changeEventHandler} className="focus-visible:ring-offset-0 focus-visible:ring-0 my-1 border-gray-400" />
 						</div>
 						{
 							companies.length > 0 && (
@@ -120,9 +120,9 @@ const PostJob = () => {
 									<SelectContent>
 										<SelectGroup>
 											{
-												companies.map((company) => {
+												companies?.map((company) => {
 													return (
-														<SelectItem value={company?.name?.toLowerCase()}>{company.name}</SelectItem>
+														<SelectItem value={company?.name?.toLowerCase()}>{company?.name}</SelectItem>
 													)
 												})
 											}
@@ -138,7 +138,7 @@ const PostJob = () => {
 						loading ? <Button className="w-full my-4"> <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait </Button> : <Button type="submit" className="w-full my-4">Post New Job</Button>
 					}
 					{
-						companies.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>Please register a company first befroe host a job</p>
+						companies?.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>Please register a company first befroe host a job</p>
 					}
 				</form>
 			</div>
