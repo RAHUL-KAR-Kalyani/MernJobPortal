@@ -39,28 +39,28 @@ const CompaniesTable = () => {
 				<TableBody>
 					{
 						filterCompany?.map((company) => (
-							<TableRow key={company._id}>
+							<TableRow key={company?._id}>
 
 								<TableCell className='items-center'>
 									<Avatar>
-										<AvatarImage src={company.logo} />
+										<AvatarImage src={company?.logo} />
 									</Avatar>
 								</TableCell>
-								<TableCell className='capitalize'>{company.name}</TableCell>
+								<TableCell className='capitalize'>{company?.name}</TableCell>
 
 								{/* <TableCell className='flex items-center capitalize text-base'>
 									<Avatar>
-										<AvatarImage src={company.logo} />
+										<AvatarImage src={company?.logo} />
 									</Avatar>
-									<TableCell className='capitalize'>{company.name}</TableCell>
+									<TableCell className='capitalize'>{company?.name}</TableCell>
 								</TableCell> */}
 								
-								<TableCell>{company.createdAt.split("T")[0]}</TableCell>
+								<TableCell>{company?.createdAt?.split("T")[0]}</TableCell>
 								<TableCell className='text-right cursor-pointer'>
 									<Popover>
 										<PopoverTrigger><MoreHorizontal /></PopoverTrigger>
 										<PopoverContent className='w-32'>
-											<div onClick={() => navigate(`/admin/companies/${company._id}`)} className='flex items-center gap-2 w-fit cursor-pointer'>
+											<div onClick={() => navigate(`/admin/companies/${company?._id}`)} className='flex items-center gap-2 w-fit cursor-pointer'>
 												<Edit2 className='w-4' />
 												<span>Edit</span>
 											</div>
